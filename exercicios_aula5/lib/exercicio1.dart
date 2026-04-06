@@ -8,24 +8,21 @@ class Exercicio1 extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        centerTitle: true ,
         title: const Text("Exercicio 1"),
       ),
       body: Column( 
         children: [
-          const Center(
+          Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text( "Bem vindo, usuário!"),
-                Text("dash", style: TextStyle(fontWeight: FontWeight.bold)),
-                Image.asset('assets/images/img.avif', width:  ,),
+                Image.asset('assets/images/passaro.png'),
               ],
-              
-            ),
-            
+            ),  
           ),
         ],
-  
       ),
     );
   }
