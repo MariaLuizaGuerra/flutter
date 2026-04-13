@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class Exercicio4 extends StatelessWidget {
-  const Exercicio4({super.key});
+class Exercicio6 extends StatelessWidget {
+  const Exercicio6({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +32,7 @@ class Exercicio4 extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: const [
                 Text(
-                  'Olá, esse é o exercício 4!',
+                  'Olá, esse é o exercício 6!',
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 20,
@@ -47,7 +47,45 @@ class Exercicio4 extends StatelessWidget {
               ],
             ),
           ),
-          //body
+
+          Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
+          child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+      // Texto da esquerda
+      const Text(
+        'Recomendados',
+        style: TextStyle(
+          fontSize: 18,
+          fontWeight: FontWeight.w500,
+          color: Colors.black87,
+        ),
+      ),
+      
+      // Botão "Mais" da direita
+      TextButton(
+        onPressed: () {
+          // Sua ação aqui
+        },
+        style: TextButton.styleFrom(
+          backgroundColor: Theme.of(context).colorScheme.primaryContainer,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(20),
+          ),
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
+        ),
+        child: Text(
+          'Mais',
+          style: TextStyle(
+            color: Theme.of(context).colorScheme.onPrimaryContainer,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+      ),
+    ],
+  ),
+)
         ],
       ),
     );

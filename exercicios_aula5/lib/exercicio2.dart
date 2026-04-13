@@ -38,17 +38,17 @@ class Exercicio2 extends StatelessWidget {
             ],
           ),
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 05, vertical: 85),
+            padding: EdgeInsets.symmetric(horizontal: 05, vertical: 60),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                TextButton(
                 onPressed: () {},
-                child: Text('Anterior', style: TextStyle(color: Colors.teal)),
+                child: Text('Anterior', style: TextStyle(color: Theme.of(context).colorScheme.inversePrimary)),
               ),
               TextButton(
               onPressed: () {},
-              child: Text('Próximo', style: TextStyle(color: Colors.teal)),
+              child: Text('Próximo', style: TextStyle(color:  Theme.of(context).colorScheme.inversePrimary)),
               ),
               ],
             ),

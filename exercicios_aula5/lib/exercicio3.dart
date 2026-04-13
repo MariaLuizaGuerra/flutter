@@ -43,31 +43,63 @@ class Exercicio3 extends StatelessWidget {
           ),
         ),
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 05, vertical: 70),
+            padding: EdgeInsets.symmetric(horizontal: 05, vertical: 40),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
               //Anterior
                TextButton(
                 style: TextButton.styleFrom(
-                  backgroundColor: Color.fromARGB(103, 189, 143, 231)
+                  backgroundColor: Theme.of(context).colorScheme.inversePrimary
                 ),
                 onPressed: () {},
-                child: Text('Anterior', style: TextStyle(color: const Color.fromARGB(255, 172, 95, 243))),
+                child: Text('Anterior', style: TextStyle(color:  Theme.of(context).colorScheme.surface)),
               ),
               //Proximo
               TextButton(
                 style: TextButton.styleFrom(
-                  backgroundColor: Color.fromARGB(103, 189, 143, 231)
+                  backgroundColor: Theme.of(context).colorScheme.inversePrimary
                 ),
               onPressed: () {},
-              child: Text('Próximo', style: TextStyle(color: const Color.fromARGB(255, 172, 95, 243))),
+              child: Text('Próximo', style: TextStyle(color:  Theme.of(context).colorScheme.surfaceBright)),
               ),
               ],
             ),
             
           ),
+          SizedBox(
+          height: 200, // Defina a altura total dos cards
+          child: ListView.builder(
+    scrollDirection: Axis.horizontal, // Faz o scroll ser para os lados
+    padding: const EdgeInsets.symmetric(horizontal: 16),
+    itemCount: 5, // Quantidade de itens na lista
+    itemBuilder: (context, index) {
+      return Container(
+        width: 150, // Largura de cada card
+        margin: const EdgeInsets.only(right: 12), // Espaçamento entre os cards
+        decoration: BoxDecoration(
+          color: const Color(0xFFD1E8E2), // Cor de fundo do card
+          borderRadius: BorderRadius.circular(20),
+        ),
+        /*child: Center(
+          child: Image.network(
+            Image.asset('assets/images/passaro.png'),
+            height: 100,
+          ),
+
+        ),*/
+        child: Center(
+          child: Image.network(
+            'asset/images/passaro.png', // Substitua pela sua imagem
+            height: 70,
+          ),
+        )
+      );
+    },
+  ),
+)
         ],
+        
       ),
     );
   }
