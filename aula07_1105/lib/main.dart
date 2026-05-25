@@ -1,4 +1,6 @@
 import 'package:aula07_1105/gradeHoraria.dart';
+import 'package:aula07_1105/views/exercicio1.dart';
+import 'package:aula07_1105/views/exercicio2.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -17,7 +19,7 @@ class MyApp extends StatelessWidget {
         
         colorScheme: ColorScheme.fromSeed(seedColor: const Color.fromARGB(255, 162, 0, 255)),
       ),
-      home: GradeHoraria(),
+      home: Exercicio2(),
     );
   }
 }
