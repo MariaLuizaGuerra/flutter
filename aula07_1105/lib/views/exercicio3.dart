@@ -1,36 +1,20 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class Exercicio3 extends StatefulWidget {
+  const Exercicio3({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'TextField em Tempo Real',
-      home: const TextoTempoReal(),
-    );
-  }
+  State<Exercicio3> createState() => _TextoTempoRealState();
 }
 
-class TextoTempoReal extends StatefulWidget {
-  const TextoTempoReal({super.key});
-
-  @override
-  State<TextoTempoReal> createState() => _TextoTempoRealState();
-}
-
-class _TextoTempoRealState extends State<TextoTempoReal> {
+class _TextoTempoRealState extends State<Exercicio3> {
   String _texto = '';
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('TextField em Tempo Real'),
+        title: const Text('Texto em tempo real'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -50,7 +34,7 @@ class _TextoTempoRealState extends State<TextoTempoReal> {
             ),
             const SizedBox(height: 24),
             const Text(
-              'Você digitou:',
+              'Você está digitando:',
               style: TextStyle(fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 8),

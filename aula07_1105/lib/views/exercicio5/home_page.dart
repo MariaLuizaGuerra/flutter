@@ -4,25 +4,9 @@ import 'ex1_page.dart';
 import 'ex2_page.dart';
 import 'ex3_page.dart';
 
-void main() {
-  runApp(const MyApp());
-}
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const MaterialApp(
-      title: 'Minha Aplicação',
-      home: HomePage(),
-    );
-  }
-}
-
-// ── Conteúdo da aba Home com animação Lottie ──────────────────────────────────
-class _HomeContent extends StatelessWidget {
-  const _HomeContent();
+class Exercicio5 extends StatelessWidget {
+  const Exercicio5();
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +15,7 @@ class _HomeContent extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Lottie.asset(
-            'assets/animations/welcome.json',
+            'assets/animation/festa.json',
             width: 280,
             height: 280,
             repeat: true,
@@ -47,7 +31,6 @@ class _HomeContent extends StatelessWidget {
   }
 }
 
-// ── Shell principal com BottomNavigationBar ───────────────────────────────────
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
@@ -66,7 +49,7 @@ class _HomePageState extends State<HomePage> {
   ];
 
   static const List<Widget> _paginas = [
-    _HomeContent(),
+    Exercicio5(),
     Ex1Page(),
     Ex2Page(),
     Ex3Page(),

@@ -3,23 +3,6 @@ import 'ex1_page.dart';
 import 'ex2_page.dart';
 import 'ex3_page.dart';
 
-void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const MaterialApp(
-      title: 'Minha Aplicação',
-      home: HomePage(),
-    );
-  }
-}
-
-// ── Conteúdo da aba Home ──────────────────────────────────────────────────────
 class _HomeContent extends StatelessWidget {
   const _HomeContent();
 
@@ -31,7 +14,6 @@ class _HomeContent extends StatelessWidget {
   }
 }
 
-// ── Shell principal com BottomNavigationBar ───────────────────────────────────
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 

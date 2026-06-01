@@ -94,7 +94,7 @@ class _Exercicio2State extends State<Exercicio2> {
                     borderRadius: BorderRadius.circular(12),
                   ),
                   child: Text(
-                    'Olá, $_nome!, interesante saber que você está  $_sentimento ',
+                    'Olá, $_nome! Interesante saber que você está  $_sentimento ',
                     style: Theme.of(context).textTheme.titleLarge?.copyWith(
                           color: Theme.of(context)
                               .colorScheme
