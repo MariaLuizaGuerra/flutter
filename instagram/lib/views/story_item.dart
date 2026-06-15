@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 
-class StoryItem extends StatelessWidget{
-  const StoryItem({super.key});
+// Widget que representa cada item da lista de stories (círculo horizontal)
+class StoryItem extends StatelessWidget {
+  final String text;
+
+  const StoryItem({super.key, required this.text});
 
   @override
   Widget build(BuildContext context) {
@@ -12,9 +15,11 @@ class StoryItem extends StatelessWidget{
         width: 100,
         decoration: BoxDecoration(
           color: Theme.of(context).colorScheme.inversePrimary,
-          shape: BoxShape.circle,
+          shape: BoxShape.circle, // formato circular
         ),
-        child: Center(child: Text(text, style: const TextStyle(fontSize: 20),),),
+        child: Center(
+          child: Text(text, style: const TextStyle(fontSize: 14)),
+        ),
       ),
     );
   }
